@@ -12,6 +12,13 @@ public class ProjectDao
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
     }
     private final String SQL_FOR_PROJECT="INSERT INTO PROJECT VALUES(:projectNo,:title,:description,:duration,:status)";
+
+    /**
+     *
+     * @param project project
+     * @return rowCount
+     */
+
     public int insertProjects(Project project)
     {
         MapSqlParameterSource parameterSource=new MapSqlParameterSource();
